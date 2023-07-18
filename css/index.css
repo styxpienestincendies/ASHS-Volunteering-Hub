@@ -1,0 +1,93 @@
+/* Header */
+.websiteheader {
+    padding: 70px;
+    background: #7C9F8E;
+    position: static;
+}
+
+.websiteheader img {
+    float: left;
+    display: inline;
+    width: 163px;
+    height: 83px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.websiteheader h1 {
+    display: inline;
+    position: relative;
+    text-align: center;
+    float: left;
+    left: 30%;
+    top: -19px;
+    color: #FFFFFF;
+}
+
+/* Button */
+.btn {
+    float: right;
+    width: 200px;
+    top: -19px;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: #ACC9AD !important;
+    border-color: #ACC9AD !important;
+}
+
+/* Navigation Bar*/
+
+.nav-link {
+    margin: auto !important;
+}
+
+ul.nav {
+    background-color: #7C9F8E;
+
+    list-style: none;
+    overflow: hidden;
+    text-align: center !important;
+    list-style-type: none;
+}
+
+.nav-link {
+    padding: 10px !important;
+    width: max-content !important;
+}
+
+a.nav-link {
+    color: black;
+    width: 120px !important;
+    padding: 25px 20px;
+    text-align: center;
+
+}
+
+a.nav-link:hover:not(.active) {
+    background-color: #D9D9D9;
+}
+
+.active {
+    background-color: #D9D9D9;
+}
+
+/*
+display: block;
+list-style: none;
+margin: 0;
+padding: 0;
+line-height: normal;
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+
+    box-sizing: border-box;
