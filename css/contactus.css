@@ -96,6 +96,7 @@ form {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 20px;
+    background: #7C9F8E;
 }
 
 .form-group {
@@ -120,7 +121,7 @@ form {
 
 .contact-form-button {
     display: inline-block;
-    background: #7C9F8E;
+    background: #EAE7CD;
     padding: 14px 0;
     color: white;
     text-transform: uppercase;
