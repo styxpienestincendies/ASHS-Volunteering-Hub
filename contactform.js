@@ -1,19 +1,36 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+// // Initalise Firebase
+// var firebaseConfig = {
+//     apiKey: "AIzaSyAEd3ut9QFt3VOYrxL81QcDXXk38POzmJE",
+//     authDomain: "contact-form-86ebf-default-rtdb.firebaseio.com",
+//     projectId: "contact-form-86ebf",
+//     storageBucket: "contact-form-86ebf.appspot.com",
+//     messagingSenderId: "371250661774",
+//     appId: "1:371250661774:web:62d7559b8ccf9914867cdf"
+// }
 
-// Initalise Firebase
-var firebaseConfig = {
+// firebase.initializeApp(firebaseConfig);
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app"
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
     apiKey: "AIzaSyAEd3ut9QFt3VOYrxL81QcDXXk38POzmJE",
     authDomain: "contact-form-86ebf.firebaseapp.com",
+    databaseURL: "https://contact-form-86ebf-default-rtdb.firebaseio.com",
     projectId: "contact-form-86ebf",
     storageBucket: "contact-form-86ebf.appspot.com",
     messagingSenderId: "371250661774",
     appId: "1:371250661774:web:62d7559b8ccf9914867cdf"
-}
+};
 
-var app = firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
 // Reference message collection
-var messageRef = firebase.database().ref('message');
+var messagesRef = firebase.database().ref('messages');
 
 // Checks to see if for is submitting 
 document.getElementById('contactForm').addEventListener('submit', submitForm);
@@ -40,7 +57,7 @@ function getInputVal(id) {
 
 // Function to save the message to Firebase
 function saveMessage(firstname, lastname, email, phonenumber, message) {
-    var newMessageRef = messageRef.push();
+    var newMessageRef = messagesRef.push();
     newMessageRef.set({
         firstname: firstname,
         lastname: lastname,
